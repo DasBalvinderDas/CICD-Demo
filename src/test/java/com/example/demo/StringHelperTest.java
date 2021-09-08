@@ -1,10 +1,14 @@
 package com.example.demo;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 public class StringHelperTest {
 
 	// AACD => CD ACD => CD CDEF=>CDEF CDAA => CDAA
@@ -17,6 +21,7 @@ public class StringHelperTest {
 	}
 	
 
+	
 	@Test
 	public void testTruncateAInFirst2Positions_AinFirst2Positions() {
 		assertEquals("CD", helper.truncateAInFirst2Positions("AACD"));
